@@ -1,9 +1,19 @@
 import React from "react"
 
-export default function Analysis() {
+export default function Analysis({analysis, theme}) {
+  const myAnalysis = analysis.map((ele, idx) => {
+    return (
+      <>
+        <p id="analysis-num">{ele}</p>
+      </>
+    )
+  })
   return (
-    <div className="top-row">
+    <div className={theme ? "components-light top-row" : "components-dark top-row" }>
       <p>Sentiment Analysis</p>
+      <div id="analysis">
+        {myAnalysis}
+      </div>
     </div>
   )
 }
