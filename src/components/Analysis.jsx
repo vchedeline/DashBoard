@@ -1,7 +1,7 @@
 import React from "react"
 
 export default function Analysis({analysis, theme}) {
-  const myAnalysis = analysis.map((ele, idx) => {
+  const myAnalysis = analysis.map((ele) => {
     return (
       <>
         <p id="analysis-num">{ele}</p>

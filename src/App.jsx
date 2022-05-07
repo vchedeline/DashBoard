@@ -16,7 +16,7 @@ export default function App() {
     <div className={theme ? "light-board" : "dark-board" } id="board"> 
       <header>
         <div>
-          My Dashboard
+          Chedou's Dashboard
         </div>
         <button onClick={styleMode}>{theme ? "Dark Mode" : "Light Mode"}</button>
       </header>  
