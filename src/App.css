@@ -87,7 +87,7 @@ header div {
 .display-area {
   grid-area: 2 / 2 / span 3 / span 3;
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-template: 35% 1fr 1fr / 1fr 1fr 1fr;
 }
 
 #full-display {
@@ -96,24 +96,38 @@ header div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   font-family: var(--title-font);
 }
 
+#full-display h1 {
+  font-size: 4em;
+}
+
+#full-display p {
+  font-family: var(--content-font);
+  font-size: xx-large;
+}
+
+#full-display ul {
+  font-size: 2.5em;
+}
+
 #top-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 10px;
   font-family: var(--title-font);
 }
 
 #top-row p {
-  margin-left: 10px;
+  font-family: var(--content-font);
+  font-size: 1.8em;
 }
 
-#analysis {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;  
-  align-items: center;
+li {
+ list-style: none;
 }
 
 #visitors {
@@ -125,14 +139,50 @@ header div {
   align-items: center;
 }
 
-#title {
+#header {
+  display: flex;
+  justify-content: space-between;
   width: 95%;
+  height: 20%;
   font-family: var(--title-font);
+  font-size: small;
 }
 
+#header p {
+  font-size: x-large;
+  align-self: center;
+}
 #graph {
   height: 70%;
   width: 90%;
   border: 2px rgb(2, 206, 217) solid;
   margin: 10px;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 60%;
+  width: 95%;
+  font-family: var(--content-font);
+  font-size: x-large;
+}
+
+#settings button {
+  font-family: var(--content-font);
+  font-size: xx-large;
+}
+
+.btn-dark {
+  border: 2px solid rgb(190, 22, 50);
+  background-color: rgba(190, 22, 50, .5);
+  color: rgb(190, 22, 50);
+}
+
+.btn-light {
+  border: 2px solid rgb(2, 206, 217);
+  background-color: rgba(2, 206, 217, .5);
+  color: white;
 }

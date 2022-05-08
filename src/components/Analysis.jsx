@@ -2,16 +2,16 @@ export default function Analysis({analysis, theme, id}) {
   const myAnalysis = analysis.map((ele, idx) => {
     return (
       <>
-        <p id="analysis-num">{ele}</p>
+        <li id="analysis-num">{ele}</li>
       </>
     )
   })
   return (
     <div className={theme ? "components-light" : "components-dark"} id={id}>
-      <p>Sentiment Analysis</p>
-      <div id="analysis">
-        {myAnalysis}
-      </div>
+      <h1>Sentiment Analysis</h1>
+      <ul>
+      {myAnalysis}
+      </ul>
     </div>
   )
 }

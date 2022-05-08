@@ -28,14 +28,14 @@ const data = {
   datasets: [
     {
       label: "Returning Visitor",
-      data: labels.map(() => Math.random()),
+      data: labels.map(() => Math.floor(Math.random()*1000)),
       borderColor: 'rgb(190, 22, 50)',
       backgroundColor: 'rgba(190, 22, 50, 0.1)',
       fill: true,
     },
     {
       label: "New Visitor",
-      data: labels.map(() => Math.random()),
+      data: labels.map(() => Math.floor(Math.random()*1000)),
       borderColor: 'rgb(2, 206, 217)',
       backgroundColor: "rgba(2, 206, 217, 0.2)",
       fill: true,
