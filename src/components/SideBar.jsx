@@ -1,4 +1,4 @@
-export default function SideBar({getDisplay}) {
+export default function SideBar({getDisplay, theme}) {
   
   const handleSubmit = (evt) => {
     evt.preventDefault();

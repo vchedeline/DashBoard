@@ -2,8 +2,9 @@ import Reviews from "./Reviews";
 import Ratings from "./Ratings";
 import Analysis from "./Analysis";
 import Visitors from "./Visitors";
+import Settings from "./Settings";
 
-export default function DisplayArea({ theme, display }) {
+export default function DisplayArea({ styleMode, theme, display }) {
   const displayDashboard = () => {
     return (
       <div className="display-area">
@@ -43,6 +44,13 @@ export default function DisplayArea({ theme, display }) {
           <Visitors theme={theme} visitor="888" id="full-display" />
         </div>
       );
+    }
+    if (component === "settings") {
+      return (
+        <div className="display-area">
+          <Settings styleMode={styleMode} theme={theme} id="full-display"/>
+        </div>
+      )
     }
   };
 

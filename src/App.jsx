@@ -21,10 +21,9 @@ export default function App() {
         <div>
           Chedou's Dashboard
         </div>
-        <button onClick={styleMode}>{theme ? "Dark Mode" : "Light Mode"}</button>
       </header>  
-      <SideBar getDisplay={getDisplay}/>
-      <DisplayArea theme={theme} display={display}/>
+      <SideBar getDisplay={getDisplay} theme={theme}/>
+      <DisplayArea styleMode={styleMode} theme={theme} display={display}/>
     </div>
   );
 }
