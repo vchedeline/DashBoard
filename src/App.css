@@ -159,6 +159,10 @@ li {
   margin: 10px;
 }
 
+#quotes {
+  font-style: italic;
+}
+
 #settings {
   display: flex;
   flex-direction: column;

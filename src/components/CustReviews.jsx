@@ -20,7 +20,7 @@ export default function CustReviews({ review, theme, id }) {
   
   const allReviews = reviews.map((ele, idx) => {
      return (
-      <p>
+      <p id="quotes">
         "{ele.quote}"<span> - {ele.user}</span>
       </p>
     );
