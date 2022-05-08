@@ -1,7 +1,5 @@
-import React from "react"
-
-export default function Analysis({analysis, theme}) {
-  const myAnalysis = analysis.map((ele) => {
+export default function Analysis({analysis, theme, id}) {
+  const myAnalysis = analysis.map((ele, idx) => {
     return (
       <>
         <p id="analysis-num">{ele}</p>
@@ -9,7 +7,7 @@ export default function Analysis({analysis, theme}) {
     )
   })
   return (
-    <div className={theme ? "components-light top-row" : "components-dark top-row" }>
+    <div className={theme ? "components-light" : "components-dark"} id={id}>
       <p>Sentiment Analysis</p>
       <div id="analysis">
         {myAnalysis}

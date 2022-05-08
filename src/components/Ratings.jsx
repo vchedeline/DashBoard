@@ -1,8 +1,6 @@
-import React from "react"
-
-export default function Ratings({rating, theme}) {
+export default function Ratings({rating, theme, id}) {
   return (
-    <div className={theme ? "components-light top-row" : "components-dark top-row" } >
+    <div className={theme ? "components-light" : "components-dark"} id={id} >
       <p>Average Ratings</p>
       <p id="rating-num">{rating}</p>
     </div>

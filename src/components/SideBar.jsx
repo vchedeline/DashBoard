@@ -1,14 +1,31 @@
-import React from "react"
+export default function SideBar({getDisplay}) {
+  
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    getDisplay(evt.target[0].name)
+  }
 
-export default function SideBar() {
   return (
     <div id="side-bar">
-      <p>Dashboard</p>
-      <p>Widget</p>
-      <p>Reviews</p>
-      <p>Customers</p>
-      <p>Online Analysis</p>
-      <p>Settings</p>
+      <form onSubmit={handleSubmit}>
+        <input type="submit" name="dashboard" value="Dashboard"/>
+      </form>
+      <form onSubmit={handleSubmit}>
+        <input type="submit" name="ratings" value="Average Ratings"/>
+      </form>
+      <form onSubmit={handleSubmit}>
+        <input type="submit" name="reviews" value="Reviews"/>
+      </form>
+      
+      <form onSubmit={handleSubmit}>
+        <input type="submit" name="visitors" value="Customers"/>
+      </form>
+      <form onSubmit={handleSubmit}>
+        <input type="submit" name="analysis" value="Online Analysis"/>
+      </form>
+      <form onSubmit={handleSubmit}>
+        <input type="submit" name="settings" value="Settings"/>
+      </form>
     </div>
   )
 }

@@ -51,22 +51,40 @@ header {
 }
 
 #side-bar {
-  grid-area: 2 / 1 / span 3 / 1 ;
+  grid-area: 2 / 1 / span 2 / 1 ;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+}
+
+#side-bar input {
+  margin-left: 10%;
+  background-color: transparent;
+  border: none;
   font-family: var(--content-font);
 }
 
-#side-bar p {
-  margin-left: 10%;
+#side-bar input:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.top-row {
+.display-area {
+  grid-area: 2 / 2 / span 3 / span 3;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+#full-display {
+  grid-area: 1 / 1 / span 3 / span 3;
+}
+
+#top-row {
   margin: 10px;
   font-family: var(--title-font);
 }
 
-.top-row p {
+#top-row p {
   margin-left: 10px;
 }
 
@@ -78,7 +96,7 @@ header {
 }
 
 #visitors {
-  grid-area: 3 / 2 / span 2 / span 3;
+  grid-area: 2 / 1 / span 3 / span 3;
   margin: 10px;
   display: flex;
   flex-direction: column;
