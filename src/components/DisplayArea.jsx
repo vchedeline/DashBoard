@@ -1,14 +1,14 @@
-import Reviews from "./Reviews";
 import Ratings from "./Ratings";
 import Analysis from "./Analysis";
 import Visitors from "./Visitors";
 import Settings from "./Settings";
+import CustReviews from "./CustReviews";
 
 export default function DisplayArea({ styleMode, theme, display }) {
   const displayDashboard = () => {
     return (
       <div className="display-area">
-        <Reviews theme={theme} review="1,281" id="top-row" />
+        <CustReviews theme={theme} review="1,281" id="top-row" />
         <Ratings theme={theme} rating="4.6 stars" id="top-row" />
         <Analysis theme={theme} analysis={[100, 918, 399]} id="top-row" />
         <Visitors theme={theme} visitor="888" id="visitors" />
@@ -20,7 +20,7 @@ export default function DisplayArea({ styleMode, theme, display }) {
     if (component === "reviews") {
       return (
         <div className="display-area">
-          <Reviews theme={theme} review="1,281" id="full-display" />
+          <CustReviews theme={theme} review="1,281" id="full-display" />
         </div>
       );
     }
@@ -34,7 +34,11 @@ export default function DisplayArea({ styleMode, theme, display }) {
     if (component === "analysis") {
       return (
         <div className="display-area">
-          <Analysis theme={theme} analysis={[100, 918, 399]} id="full-display" />
+          <Analysis
+            theme={theme}
+            analysis={[100, 918, 399]}
+            id="full-display"
+          />
         </div>
       );
     }
@@ -48,9 +52,9 @@ export default function DisplayArea({ styleMode, theme, display }) {
     if (component === "settings") {
       return (
         <div className="display-area">
-          <Settings styleMode={styleMode} theme={theme} id="full-display"/>
+          <Settings styleMode={styleMode} theme={theme} id="full-display" />
         </div>
-      )
+      );
     }
   };
 
