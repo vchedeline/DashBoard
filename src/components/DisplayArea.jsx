@@ -9,7 +9,7 @@ export default function DisplayArea({ styleMode, theme, display }) {
     return (
       <div className="display-area">
         <Reviews theme={theme} review="1,281" id="top-row" />
-        <Ratings theme={theme} rating="4.6" id="top-row" />
+        <Ratings theme={theme} rating="4.6 stars" id="top-row" />
         <Analysis theme={theme} analysis={[100, 918, 399]} id="top-row" />
         <Visitors theme={theme} visitor="888" id="visitors" />
       </div>
